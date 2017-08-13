@@ -54,6 +54,12 @@ ssh -L 16006:127.0.0.1:6006 -i ~/.ssh/ljubljana yma@ljubljana.iems.northwestern.
 ```
 refer to http://127.0.0.1:16006/ in a local browser
 
+## Remote ipython/jupyter notebook
+
+Source:https://coderwall.com/p/ohk6cg/remote-access-to-ipython-notebooks-via-ssh
+
+```jupyter notebook --no-browser --port=7777```
+
 ## Tmux
 ```tmux```
 
