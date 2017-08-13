@@ -96,3 +96,5 @@ In case you're wondering, the -R option sets up a reverse channel from port 5000
 - alias sa='source activate dl'
 - alias sshcontainer='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -L 7777:127.0.0.1:7777  ymaab@172.17.0.4'
 
+## iPython Extensions:
+ - http://ipython.readthedocs.io/en/stable/config/extensions/
