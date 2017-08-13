@@ -90,6 +90,9 @@ you can use this
 ```ssh -R localhost:50000:host2:22 host1 'rsync -e "ssh -p 50000" -vuar /var/www localhost:/var/www'```
 In case you're wondering, the -R option sets up a reverse channel from port 50000 on host1 that maps (via your local machine) to port 22 on host2. There is no direct connection from host1 to host2.
 
-## My Custom Functions on Mac:
+## My Custom Functions on Mac / Alias on Servers:
 - “gits” stands for “git status”
 - “gitacp “XXX” ” stands for “git add *” + “git commit -m “XXX”” + “git push origin”
+- alias sa='source activate dl'
+- alias sshcontainer='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -L 7777:127.0.0.1:7777  ymaab@172.17.0.4'
+
