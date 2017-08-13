@@ -1,2 +1,88 @@
 # LinuxTricks
 Record some ueful Linux Tricks that I have been using
+
+## when using THEANO
+```
+THEANO_FLAGS=device=cuda0
+```
+```
+THEANO_FLAGS=mode=FAST_RUN,floatX=float32,device=cuda0
+```
+```
+THEANO_FLAGS=mode=FAST_RUN,floatX=float32,device=gpu0 python train.py
+```
+```
+THEANO_FLAGS=mode=FAST_RUN,floatX=float32,device=gpu2 python
+```
+
+## when using Tensor Flow:
+
+```
+CUDA_VISIBLE_DEVICES=0,1,2 python
+```
+```
+CUDA_VISIBLE_DEVICES=2 python
+```
+```
+CUDA_VISIBLE_DEVICES=“” pytohn
+```
+
+## Profiling
+```
+python -m cProfile -s cumtime lwn2pocket.py
+```
+
+## GPU related
+```
+nvidiashow
+```
+自定义的显示nvidia-smi 的命令
+
+```
+nvidia-smi
+```
+“the status of nvidia gpu card."
+
+## Forward Tensorboard:
+ljubljana.iems.northwestern.edu: 129.105.36.99
+开始tensorboard
+```
+tensorboard --logdir=./log
+```
+```
+ssh -L 16006:127.0.0.1:6006 -i ~/.ssh/ljubljana yma@ljubljana.iems.northwestern.edu
+```
+refer to http://127.0.0.1:16006/ in a local browser
+
+## Tmux
+```tmux```
+
+```tux new -s svrg```
+
+Dettach: [ctrl+b][d]
+
+```tux attach: tux a -t svrg```
+
+## Environment
+```source activate svrg```
+
+## Rsync
+```
+rsync -avz -e "ssh -i /home/yma/.ssh/celje" yma@celje.iems.northwestern.edu:/home/yma/imagenet /home/yma/imagenet --progress```
+
+rsync with LAN acceleration:
+```rsync -aHAXxv --numeric-ids -e "ssh -i /home/yma/.ssh/celje -T -c arcfour -o Compression=no -x" yma@celje.iems.northwestern.edu:/home/yma/imagenet /home/yma/imagenet --progress```
+
+As you have discovered you cannot use rsync with a remote source and a remote destination. Assuming the two servers can't talk directly to each other, it is possible to use ssh to tunnel via your local machine.
+
+Instead of
+
+rsync -vuar host1:/var/www host2:/var/www
+you can use this
+
+ssh -R localhost:50000:host2:22 host1 'rsync -e "ssh -p 50000" -vuar /var/www localhost:/var/www'
+In case you're wondering, the -R option sets up a reverse channel from port 50000 on host1 that maps (via your local machine) to port 22 on host2. There is no direct connection from host1 to host2.
+
+## My Custom Functions on Mac:
+- “gits” stands for “git status”
+- “gitacp “XXX” ” stands for “git add *” + “git commit -m “XXX”” + “git push origin”
