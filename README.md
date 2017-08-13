@@ -95,38 +95,46 @@ In case you're wondering, the -R option sets up a reverse channel from port 5000
 - “gitacp “XXX” ” stands for “git add *” + “git commit -m “XXX”” + “git push origin”
 - alias sa='source activate dl'
 - alias sshcontainer='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -L 7777:127.0.0.1:7777  ymaab@172.17.0.4'
+
 ### tmux
 
 ```function ta() {
         tmux attach
 }```
+
 ### for github
-```function gitacp() {
+
+```
+function gitacp() {
     git add *
     git add -u
     git commit -m "$1"
     git push origin
-}```
+}
+```
 
-```function gitacp_master() {
+```
+function gitacp_master() {
     git add *
     git commit -m "$1"
     git push origin master
-}```
+}
+```
 
-```function gitacp_dev() {
+```
+function gitacp_dev() {
     git add *
     git commit -m "$1"
     git push origin dev
-}```
+}
+```
 
 ```function gits(){
     git status
-}```
+}
+```
 
-```function gpus(){
-while sleep 1; do nvidia-smi; done
-}```
+```function gpus(){while sleep 1; do nvidia-smi; done}```
 
 ### alias
 ```alias nvishow='watch -n1 nvidia-smi'```
