@@ -17,6 +17,8 @@ THEANO_FLAGS=mode=FAST_RUN,floatX=float32,device=gpu2 python
 
 ## when using Tensor Flow:
 
+Noted that the order of GPUs is reversed on dd0 and dd1. 
+
 ```
 CUDA_VISIBLE_DEVICES=0,1,2 python
 ```
