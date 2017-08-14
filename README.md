@@ -24,7 +24,7 @@ CUDA_VISIBLE_DEVICES=0,1,2 python
 CUDA_VISIBLE_DEVICES=2 python
 ```
 ```
-CUDA_VISIBLE_DEVICES=“” pytohn
+CUDA_VISIBLE_DEVICES=“” python
 ```
 
 ## Profiling
