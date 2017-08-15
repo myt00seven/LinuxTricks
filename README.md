@@ -144,3 +144,8 @@ function gitacp_dev() {
 
 ## iPython Extensions:
  - http://ipython.readthedocs.io/en/stable/config/extensions/
+
+## Solving local error
+ - https://stackoverflow.com/questions/36394101/pip-install-locale-error-unsupported-locale-setting
+ - unset LC_ALL
+ - export LC_ALL=C
