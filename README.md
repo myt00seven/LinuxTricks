@@ -149,3 +149,6 @@ function gitacp_dev() {
  - https://stackoverflow.com/questions/36394101/pip-install-locale-error-unsupported-locale-setting
  - unset LC_ALL
  - export LC_ALL=C
+ 
+## Install Newer tensorflow on container
+https://stackoverflow.com/questions/39817645/cuda-cudnn-installed-but-tensorflow-cant-use-the-gpu
