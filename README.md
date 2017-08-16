@@ -29,6 +29,11 @@ CUDA_VISIBLE_DEVICES=2 python
 CUDA_VISIBLE_DEVICES=“” python
 ```
 
+## Forcing Keras to use Theano:
+```
+KERAS_BACKEND=theano THEANO_FLAGS=mode=FAST_RUN,floatX=float32,device=gpu6 python resnet_custom_dataset_theano.py
+```
+
 ## Profiling
 ```
 python -m cProfile -s cumtime lwn2pocket.py
