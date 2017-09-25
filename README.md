@@ -146,6 +146,8 @@ function gitacp_dev() {
 ### alias
 ```alias nvishow='watch -n1 nvidia-smi'```
 ```alias sa='source activate tf'```
+```alias rsynccopy="rsync --partial --progress --append --rsh=ssh -r -h "```
+```alias rsyncmove="rsync --partial --progress --append --rsh=ssh -r -h --remove-sent-files"```
 
 ## iPython Extensions:
  - http://ipython.readthedocs.io/en/stable/config/extensions/
