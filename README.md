@@ -162,3 +162,6 @@ function gitacp_dev() {
  
 ## Install Newer tensorflow on container
 https://stackoverflow.com/questions/39817645/cuda-cudnn-installed-but-tensorflow-cant-use-the-gpu
+
+## Manually install ffmpeg (static version)
+https://gist.github.com/jmsaavedra/62bbcd20d40bcddf27ac
