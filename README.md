@@ -165,3 +165,5 @@ https://stackoverflow.com/questions/39817645/cuda-cudnn-installed-but-tensorflow
 
 ## Manually install ffmpeg (static version)
 https://gist.github.com/jmsaavedra/62bbcd20d40bcddf27ac
+
+It turns out that imageio has a function to download this for you. Read the help information!
