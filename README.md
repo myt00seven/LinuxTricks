@@ -109,7 +109,9 @@ In case you're wondering, the -R option sets up a reverse channel from port 5000
         tmux attach
 }```
 
-### for github
+## My .bashrc profile:
+
+### For server
 
 ```
 function gitacp() {
@@ -142,6 +144,18 @@ function gitacp_dev() {
 ```
 
 ```function gpus(){while sleep 1; do nvidia-smi; done}```
+
+```alias nvishow='watch -n1 nvidia-smi'```
+
+```alias sa='source activate dl'```
+
+```alias sshcontainer='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -L 7777:127.0.0.1:7777  ymaab@172.17.0.4'```
+
+### Extra setting inside container:
+
+```export HOME=/data/ymaab```
+
+```alias ipyserver='jupyter notebook --no-browser --port=7777'```
 
 ### alias
 ```alias nvishow='watch -n1 nvidia-smi'```
