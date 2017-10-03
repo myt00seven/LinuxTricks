@@ -105,9 +105,11 @@ In case you're wondering, the -R option sets up a reverse channel from port 5000
 
 ### tmux
 
-```function ta() {
+```
+function ta() {
         tmux attach
-}```
+}
+```
 
 ## My .bashrc profile:
 
