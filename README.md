@@ -140,7 +140,8 @@ function gitacp_dev() {
 }
 ```
 
-```function gits(){
+```
+function gits(){
     git status
 }
 ```
