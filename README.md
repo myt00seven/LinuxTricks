@@ -44,6 +44,11 @@ Use this if want to write to file
 python -m cProfile -s cumtime lwn2pocket.py > profile.txt
 ```
 
+Use this if want to duplicate the output to file while keep the one on screen.
+```
+python -m cProfile -s cumtime lwn2pocket.py | tee profile.txt
+```
+
 
 ## GPU related
 ```
