@@ -39,6 +39,12 @@ KERAS_BACKEND=theano THEANO_FLAGS=mode=FAST_RUN,floatX=float32,device=gpu6 pytho
 python -m cProfile -s cumtime lwn2pocket.py
 ```
 
+Use this if want to write to file
+```
+python -m cProfile -s cumtime lwn2pocket.py > profile.txt
+```
+
+
 ## GPU related
 ```
 nvidiashow
