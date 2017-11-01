@@ -179,7 +179,7 @@ function gits(){
 
 ```export HOME=/data/ymaab```
 
-```alias ipyserver='jupyter notebook --no-browser --port=7777'```
+```alias ipyserver='jupyter notebook --no-browser  --ip=127.0.0.1 --port=7777'```
 
 ### alias
 ```alias nvishow='watch -n1 nvidia-smi'```
