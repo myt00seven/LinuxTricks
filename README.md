@@ -217,3 +217,13 @@ It turns out that imageio has a function to download this for you. Read the help
 The PyTorch Container:
 ```ssh lxe1646 -p 2203```
 
+# Run Command
+## Tensorflow CycleGAN
+```python -m CycleGAN_TensorFlow.create_cyclegan_dataset --image_path_a=./CycleGAN_TensorFlow/input/syncars/trainA --image_path_b=./CycleGAN_TensorFlow/input/syncars/trainB --dataset_name="syncars_train" --do_shuffle=0```
+
+```python -m CycleGAN_TensorFlow.create_cyclegan_dataset --image_path_a=./CycleGAN_TensorFlow/input/syncars/testA --image_path_b=./CycleGAN_TensorFlow/input/syncars/testB --dataset_name="syncars_test" --do_shuffle=0```
+
+```CUDA_VISIBLE_DEVICES=3 python -m CycleGAN_TensorFlow.main --to_train=1 --log_dir=CycleGAN_TensorFlow/output/cyclegan/syncars  --config_filename=CycleGAN_TensorFlow/configs/syncars_train.json```
+
+```CUDA_VISIBLE_DEVICES=2 python -m CycleGAN_TensorFlow.main --to_train=0 --log_dir=CycleGAN_TensorFlow/output/cyclegan/syncars  --config_filename=CycleGAN_TensorFlow/configs/syncars_test.json    --checkpoint_dir=CycleGAN_TensorFlow/output/cyclegan/syncars/20171108-105517```
+
