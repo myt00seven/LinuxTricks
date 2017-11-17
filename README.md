@@ -227,3 +227,8 @@ The PyTorch Container:
 
 ```CUDA_VISIBLE_DEVICES=2 python -m CycleGAN_TensorFlow.main --to_train=0 --log_dir=CycleGAN_TensorFlow/output/cyclegan/syncars  --config_filename=CycleGAN_TensorFlow/configs/syncars_test.json    --checkpoint_dir=CycleGAN_TensorFlow/output/cyclegan/syncars/20171108-105517```
 
+# Linux Bash
+
+## Move Files in batch filtered with name
+
+for n in $(seq 9431 9999); do mv "IMG_$n.jpg" some_other_dir; done
