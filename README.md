@@ -231,4 +231,12 @@ The PyTorch Container:
 
 ## Move Files in batch filtered with name
 
+```
 for n in $(seq 9431 9999); do mv "IMG_$n.jpg" some_other_dir; done
+```
+
+## Find without permission denied warning
+
+```
+find . 2>&1 >files_and_folders | grep -v 'Permission denied' >&2
+```
