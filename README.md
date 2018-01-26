@@ -238,5 +238,5 @@ for n in $(seq 9431 9999); do mv "IMG_$n.jpg" some_other_dir; done
 ## Find without permission denied warning
 
 ```
-find . 2>&1 >files_and_folders | grep -v 'Permission denied' >&2
+find / -name car_damage*  2>&1 | grep -v "Permission denied"
 ```
