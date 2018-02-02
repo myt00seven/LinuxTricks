@@ -175,6 +175,8 @@ function gits(){
 
 ```alias sshcontainer='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -L 7777:127.0.0.1:7777  ymaab@172.17.0.4'```
 
+```alias fcount='find . | wc -l'```
+
 ### Extra setting inside container:
 
 ```export HOME=/data/ymaab```
