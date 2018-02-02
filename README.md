@@ -243,3 +243,9 @@ find / -name car_damage*  2>&1 | grep -v "Permission denied"
 
 # Install Package locally without root
 https://askubuntu.com/questions/339/how-can-i-install-a-package-without-root-access
+
+# List for useful Linux programs:
+
+- ncdu
+        - visualize the data usage
+
