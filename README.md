@@ -251,3 +251,10 @@ https://askubuntu.com/questions/339/how-can-i-install-a-package-without-root-acc
 - ncdu
         - visualize the data usage
 
+# Move top 100 files
+```
+for file in $(ls -p | grep -v / | tail -100)
+do
+mv $file /other/location
+done
+```
