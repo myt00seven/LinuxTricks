@@ -258,6 +258,10 @@ do
 mv $file /other/location
 done
 ```
-# Jupyter change Conda kernel extension
+## Jupyter change Conda kernel extension
 
+For conda kernel sipport:
+https://github.com/Anaconda-Platform/anaconda-nb-extensions
+
+For solyly extensions:
 https://github.com/ipython-contrib/jupyter_contrib_nbextensions
