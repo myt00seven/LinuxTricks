@@ -265,3 +265,8 @@ https://github.com/Anaconda-Platform/anaconda-nb-extensions
 
 For solyly extensions:
 https://github.com/ipython-contrib/jupyter_contrib_nbextensions
+
+# Pandas Dataframe
+[MultiIndex CrossSelection](https://pandas-docs.github.io/pandas-docs-travis/advanced.html#advanced-xs):
+The xs method of DataFrame additionally takes a level argument to make selecting data at a particular level of a MultiIndex easier.
+df.xs('one', level='second')
