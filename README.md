@@ -272,3 +272,8 @@ The xs method of DataFrame additionally takes a level argument to make selecting
 ```python
 df.xs('one', level='second')
 ```
+# Atom
+
+## Atom Shortcuts Collection
+
+[A Table on Git Repo that collects Atom Shortcuts](https://github.com/nwinkler/atom-keyboard-shortcuts)
