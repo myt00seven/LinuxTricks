@@ -9,7 +9,7 @@ Do
 %env CUDA_VISIBLE_DEVICES=0
 ```
 
-of
+or
 
 ```python
 import os
