@@ -1,6 +1,27 @@
 # LinuxTricks
 Record some ueful Linux Tricks that I have been using
 
+## Assign GPU in Jupyter Notebook
+
+Do 
+```python
+%env CUDA_DEVICE_ORDER=PCI_BUS_ID
+%env CUDA_VISIBLE_DEVICES=0
+```
+
+of
+
+```python
+import os
+os.environ["CUDA_VISIBLE_DEVICES"]="0"
+```
+
+Use the following to test
+```python
+from tensorflow.python.client import device_lib
+print device_lib.list_local_devices()
+```
+
 ## when using THEANO
 ```
 THEANO_FLAGS=device=cuda0
