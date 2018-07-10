@@ -1,6 +1,10 @@
 # LinuxTricks
 Record some ueful Linux Tricks that I have been using
 
+## Quick Command to get 1% CPU utility on server
+
+stress --cpu 5 -t 300
+
 ## Assign GPU in Jupyter Notebook
 
 Do 
