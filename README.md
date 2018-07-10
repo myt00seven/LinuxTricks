@@ -1,11 +1,40 @@
 # LinuxTricks
 Record some ueful Linux Tricks that I have been using
 
+# Autorun .sh for maintaining CPU utility
+
+- Install Crontab
+  - Ubuntu comes with Crontab
+  - Centos:
+        - yum install vixie-cron
+        - yum install cronie
+        - service crond start
+        - chkconfig crond on
+ 
+`
+crontab -e -u UserName
+`
+
+Add command according to this: https://www.debian-tutorials.com/crontab-tutorial-cron-howto
+
+For the daily_run.sh
+```
+stress --cpu 5 -t 1000
+```
+
 ## Quick Command to get 1% CPU utility on server
 
 ```bash
-stress --cpu 5 -t 300
+stress --cpu 5 -t 1000
 ```
+
+Ubuntu install:
+```
+sudo apt install stress
+```
+
+Centos Install:
+`sudo yum install stress`
 
 ## Assign GPU in Jupyter Notebook
 
