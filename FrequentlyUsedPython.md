@@ -1,3 +1,15 @@
+# Jupyter
+
+## MagicFunction
+
+Time a cell:
+` %%time`
+
+Draw with Retina resolution:
+`
+%config InlineBackend.figure_format = 'retina'
+`
+
 # Pandas
 ## Create new pd and append new rows
 
