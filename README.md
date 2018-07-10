@@ -6,16 +6,22 @@ Record some ueful Linux Tricks that I have been using
 - Install Crontab
   - Ubuntu comes with Crontab
   - Centos:
-        - yum install vixie-cron
-        - yum install cronie
-        - service crond start
-        - chkconfig crond on
+```
+yum install vixie-cron
+yum install cronie
+service crond start
+chkconfig crond on
+```
  
 `
 crontab -e -u UserName
 `
 
 Add command according to this: https://www.debian-tutorials.com/crontab-tutorial-cron-howto
+
+`
+14 13 * * * ~/daily_run.sh
+`
 
 For the daily_run.sh
 ```
