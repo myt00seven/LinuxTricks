@@ -1,5 +1,11 @@
 # Jupyter
 
+## Convert To Script
+
+```bash
+jupyter nbconvert --to script yournotebook.ipynb
+```
+
 ## MagicFunction
 
 Time a cell:
