@@ -29,3 +29,9 @@ res = pd.DataFrame(columns=('Time', '25%MAPE'))
 slice1 = [{'Time':"24H", '25%MAPE':percentile(MAPEs,25)}]
 res = res.append( slice1, ignore_index= True )
 ```
+# General Python 
+
+## see properties of object
+
+for property, value in vars(theObject).iteritems():
+    print property, ": ", value
