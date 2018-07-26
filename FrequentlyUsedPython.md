@@ -37,5 +37,7 @@ for property, value in vars(theObject).iteritems():
     print property, ": ", value
 ```
 ## See members of a class
+```
 import inspect
 inspect.getmembers(TheClass, lambda a:not(inspect.isroutine(a)))
+```
