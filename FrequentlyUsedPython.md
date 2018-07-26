@@ -32,6 +32,7 @@ res = res.append( slice1, ignore_index= True )
 # General Python 
 
 ## see properties of object
-
+```
 for property, value in vars(theObject).iteritems():
     print property, ": ", value
+```
