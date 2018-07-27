@@ -239,6 +239,15 @@ function gits(){
 
 ```alias fcount='find . | wc -l'```
 
+### For personal laptop:
+
+```bash
+alias gc='gcalcli'
+alias gca='gcalcli agenda '
+alias gcm='gcalcli calm '
+alias gcw='gcalcli calw '
+```
+
 ### Extra setting inside container:
 
 ```export HOME=/data/ymaab```
