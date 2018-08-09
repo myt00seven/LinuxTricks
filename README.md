@@ -23,6 +23,12 @@ We recommand using [stress](https://linux.die.net/man/1/stress) to impose loads 
 ``` bash
 sudo apt-get install stress
 ```
+or 
+```
+sudo yum install stress
+```
+for centos user.
+
 
 Then create a bash script called "daily_run.sh" at anywhere you like, for example, the "~" directory, with following content:
 ```
