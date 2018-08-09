@@ -18,7 +18,7 @@ chkconfig crond on
 
 ## Step 2: Write a script that can run CPU
 
-We recommand using [stress](https://linux.die.net/man/1/stress) to impose loads on CPU. If your ubuntu distribution doesn't come with this command, install it with package manager:
+[Stress](https://linux.die.net/man/1/stress) is a useful tool to impose loads on CPU. If your ubuntu distribution doesn't come with this command, install it with package manager:
 ``` bash
 sudo apt-get install stress
 ```
