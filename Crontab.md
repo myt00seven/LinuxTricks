@@ -6,7 +6,7 @@
 
 ## Step 1: install crontab
 
-All modern Ubuntu comes with crontab so there is no need to install or set up it. 
+All modern Ubuntu comes with crontab so there is no need to install it. 
 
 For centos user, use the following commands to install it. The following code works on Didi's centos image:
 ``` bash
