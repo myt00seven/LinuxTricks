@@ -4,7 +4,7 @@ Record some ueful Linux Tricks that I have been using
 ## Show disk usage
 
 ```bash
-du -cBM --max-depth=1 2> >(grep -v 'Permission denied') | sort -n 
+du --exclude={relative/path,path2} -cBM --max-depth=1 2> >(grep -v 'Permission denied') | sort -n 
 ```
 or
 ``` bash
