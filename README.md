@@ -1,6 +1,22 @@
 # LinuxTricks
 Record some ueful Linux Tricks that I have been using
 
+## Automatically watch and show the latest logfile in the folder 
+
+```
+$(ls -1t | head -1)
+```
+
+```
+cat $(ls -1t | head -1)/logfile
+```
+
+```
+watch -n 1 cat $(ls -1t | head -1)/logfile
+```
+
+ref: https://superuser.com/questions/117596/how-to-tail-the-latest-file-in-a-directory
+
 ## Show disk usage
 
 ```bash
