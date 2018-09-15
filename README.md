@@ -11,6 +11,11 @@ watch -n 1 cat $(ls -1t | head -1)/logfile
 tail -f $(ls -1t | head -1)/logfile   
 ```
 
+
+```
+watch -n 1 tail $(ls -1t | head -1)
+```
+
 ref: https://superuser.com/questions/117596/how-to-tail-the-latest-file-in-a-directory
 
 ## Show disk usage
