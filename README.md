@@ -4,7 +4,7 @@ Record some ueful Linux Tricks that I have been using
 ## Trim every file under a given directory
 
 ```
-ls | xargs -I@ convert @ -trim @ m
+ls | xargs -I@ convert @ -trim @ 
 ```
 
 ## Automatically watch and show the latest logfile in the folder 
