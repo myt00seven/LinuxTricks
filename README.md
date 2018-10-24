@@ -1,6 +1,20 @@
 # LinuxTricks
 Record some ueful Linux Tricks that I have been using
 
+## Locally set bash as login sheel from sh
+
+[From here](https://stackoverflow.com/questions/33292541/how-do-i-change-my-default-shell-in-ubuntu-when-not-in-etc-passwd):
+
+If you want to fix it locally, you may have to modify your .profile to execute the shell you want:
+
+```bash
+if [ "$SHELL" != "/bin/bash" ]
+then
+    export SHELL="/bin/bash"
+    exec /bin/bash -l    # -l: login shell again
+fi
+```
+
 ## Trim every file under a given directory
 
 ```
