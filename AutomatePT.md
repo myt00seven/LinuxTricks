@@ -131,3 +131,9 @@ tasks:
     limit_new: 1
     download: /home/myt007/watch_race
 ```
+
+# My Crontab 
+
+*/30 * * * * rtcontrol --cull --yes 'path=race' ratio=+2.9
+*/30 * * * * rtcontrol --cull --yes 'path=race' is_complete=yes completed=+5d
+14 13 * * * ~/virtualenv2/bin/flexget execute
