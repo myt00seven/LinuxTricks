@@ -1,6 +1,21 @@
 # LinuxTricks
 Record some ueful Linux Tricks that I have been using
 
+## Download Youtube Videos as Audios Files
+
+- Install youtube-dl package
+    - can install it with brew
+- Use ```youtube-dl -F url ``` to check what format is available on youtube
+- Useful options include --ignore-errors \ --no-playlist \ --yes-playlit \ --embed-thumbnail \ -x (output audio)
+
+I use:
+```bash
+youtube-dl -f 140 --yes-playlist --embed-thumbnail --ignore-errors url
+```
+to download the playlist with specifying file format code as 140 (.m4a file).
+
+If the file code 140 is not available, one might consider use -x option to force ffmpeg to convert an audio fril.
+
 ## Locally set bash as login sheel from sh
 
 [From here](https://stackoverflow.com/questions/33292541/how-do-i-change-my-default-shell-in-ubuntu-when-not-in-etc-passwd):
