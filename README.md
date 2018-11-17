@@ -15,6 +15,10 @@ youtube-dl -f 140 --yes-playlist --embed-thumbnail --ignore-errors url
 to download the playlist with specifying file format code as 140 (.m4a file).
 
 If the file code 140 is not available, one might consider use -x option to force ffmpeg to convert an audio fril.
+So iCloud Music Library doesn't support the aac and opus from youtube-dl. Maybe the mp3 format will work. So it does work. Here is the recommanded commands for mp3 transformation:
+```bash
+youtube-dl -x --audio-format mp3 --yes-playlist --embed-thumbnail --ignore-errors url
+```
 
 ## Locally set bash as login sheel from sh
 
