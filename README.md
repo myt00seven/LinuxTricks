@@ -1,6 +1,12 @@
 # LinuxTricks
 Record some ueful Linux Tricks that I have been using
 
+## Rsync directory with progress bar and without overwrite
+
+```bash
+rsync -r --ignore-existing --progress source dest
+```
+
 ## Download Youtube Videos as Audios Files
 
 - Install youtube-dl package
