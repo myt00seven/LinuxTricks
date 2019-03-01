@@ -363,8 +363,8 @@ done
 ```
 ## Jupyter change Conda kernel extension
 
-For conda kernel sipport:
-https://github.com/Anaconda-Platform/anaconda-nb-extensions
+For conda kernel support:
+https://github.com/Anaconda-Platform/nb_conda_kernels
 
 For solyly extensions:
 https://github.com/ipython-contrib/jupyter_contrib_nbextensions
