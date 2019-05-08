@@ -239,12 +239,15 @@ alias fcount='find . | wc -l'
 alias ta='tmux attach'
 alias brewup='brew update; brew upgrade; brew cleanup; brew doctor'
 
+
 alias gits='git status'
 # git push
 alias gpd="git push origin develop"
 alias gpm="git push origin master"
 # Remove git from a project
 alias ungit="find . -name '.git' -exec rm -rf {} \;"
+
+
 
 alias aria2c='aria2c -x 16 -s 16 '
 alias ytdl="youtube-dl --rm-cache-dir -i --no-check-certificate --merge-output-format mp4 --format 'bestvideo[ext=mp4]+bestaudio[ext=m4a]' --add-metadata --embed-thumbnail "
@@ -257,6 +260,11 @@ alias ipyserver='jupyter notebook --no-browser --ip=127.0.0.1 --port=8888'
 alias tbhere='tensorboard --logdir=$(pwd)'
 alias ipyconvert='ipython nbconvert --to script '
 alias kalicontainer='sudo docker run -it --net="host" --privileged kali:1 /bin/bash'
+alias dockertag='function _dockertag(){ curl -s -S "https://registry.hub.docker.com/v2/repositories/library/$@/tags/" | jq ".\"results\"[][\"name\"]" | sort};_dockertag'
+# look and kill for local program that uses certain port
+alias findport='function _findport(){ lsof -n -i4TCP:$@ | grep LISTEN};_findport'
+alias killport='function _killport(){ lsof -n -i4TCP:$@ | grep LISTEN | awk "{print \$2}" | xargs kill};_killport'
+
 
 alias untar='sudo tar -xzvf'
 alias update='sudo apt-get update; sudo apt-get upgrade'
@@ -305,9 +313,10 @@ alias ln='ln -i'
 
 alias cl="clear;ls;pwd"
 
-alias sshconfig="${EDITOR:-vim} ~/.ssh/config"
-alias bashrc="${EDITOR:-vim} +120 ~/.bashrc && source ~/.bashrc && echo Bash config edited and reloaded."
-alias zshrc="${EDITOR:-vim} +120 ~/.zshrc && source ~/.zshrc && echo zshrc config edited and reloaded."
+alias editsshconfig="subl ~/.ssh/config"
+alias editbashrc="subl ~/.bashrc"
+alias editrc="subl ~/.zshrc"
+alias sourcerc="source ~/.zshrc && source ~/.bashrc"
 alias src="source "
 
 
@@ -331,8 +340,10 @@ alias mem='top -o rsize' # memory
 
 #copy output of last command to clipboard
 alias cl="fc -e -|pbcopy"
-#copy output of last command to clipboard
-alias cl="fc -e -|pbcopy"
+# copy and paste current pwd
+alias cppath='pwd|pbcopy'
+alias pbpath='cd $(pbpaste)'
+
 
 #27 Resume wget by default
 alias wget='wget -c'
