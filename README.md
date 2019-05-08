@@ -43,17 +43,17 @@ fi
 ## Trim every file under a given directory
 
 ```
-ls | xargs -I@ convert @ -trim @ 
+ls | xargs -I@ convert @ -trim @
 ```
 
-## Automatically watch and show the latest logfile in the folder 
+## Automatically watch and show the latest logfile in the folder
 
 ```
 watch -n 1 cat $(ls -1t | head -1)/logfile
 ```
 
 ```
-tail -f $(ls -1t | head -1)/logfile   
+tail -f $(ls -1t | head -1)/logfile
 ```
 
 
@@ -66,7 +66,7 @@ ref: https://superuser.com/questions/117596/how-to-tail-the-latest-file-in-a-dir
 ## Show disk usage
 
 ```bash
-du --exclude={relative/path,path2} -cBM --max-depth=1 2> >(grep -v 'Permission denied') | sort -n 
+du --exclude={relative/path,path2} -cBM --max-depth=1 2> >(grep -v 'Permission denied') | sort -n
 ```
 or
 ``` bash
@@ -76,7 +76,7 @@ ncdu
 
 ## Assign GPU in Jupyter Notebook
 
-Do 
+Do
 ```python
 %env CUDA_DEVICE_ORDER=PCI_BUS_ID
 %env CUDA_VISIBLE_DEVICES=0
@@ -111,7 +111,7 @@ THEANO_FLAGS=mode=FAST_RUN,floatX=float32,device=gpu2 python
 
 ## when using Tensor Flow:
 
-Noted that the order of GPUs is reversed on dd0 and dd1. 
+Noted that the order of GPUs is reversed on dd0 and dd1.
 
 ```
 CUDA_VISIBLE_DEVICES=0,1,2 python
@@ -228,6 +228,124 @@ function ta() {
 
 ## My .bashrc profile:
 
+```bash
+alias subl='sublime'
+alias nvishow='watch -n1 nvidia-smi'
+alias tree='tree -N'
+alias blogserver='JEKYLL_ENV=production bundle exec jekyll serve -w'
+alias atomblog='atom ~/blog'
+alias filecount='find . | wc -l'
+alias fcount='find . | wc -l'
+alias ta='tmux attach'
+alias brewup='brew update; brew upgrade; brew cleanup; brew doctor'
+
+alias gits='git status'
+# git push
+alias gpd="git push origin develop"
+alias gpm="git push origin master"
+# Remove git from a project
+alias ungit="find . -name '.git' -exec rm -rf {} \;"
+
+alias aria2c='aria2c -x 16 -s 16 '
+alias ytdl="youtube-dl --rm-cache-dir -i --no-check-certificate --merge-output-format mp4 --format 'bestvideo[ext=mp4]+bestaudio[ext=m4a]' --add-metadata --embed-thumbnail "
+alias ygl='you-get -l '
+alias yg='you-get '
+
+alias ca='source activate dl'
+alias cadl='conda activate dl'
+alias ipyserver='jupyter notebook --no-browser --ip=127.0.0.1 --port=8888'
+alias tbhere='tensorboard --logdir=$(pwd)'
+alias ipyconvert='ipython nbconvert --to script '
+alias kalicontainer='sudo docker run -it --net="host" --privileged kali:1 /bin/bash'
+
+alias untar='sudo tar -xzvf'
+alias update='sudo apt-get update; sudo apt-get upgrade'
+alias mkcd='foo(){ mkdir -p "$1"; cd "$1" }; foo '
+alias install='sudo apt-get install'
+
+# ls better
+## Colorize the ls output ##
+alias ls='ls --color=auto'
+## Use a long listing format ##
+alias ll='ls -la'
+## Show hidden files ##
+alias l.='ls -d .* --color=auto'
+alias la="ls -aF"
+alias ld="ls -ld"
+alias lt='ls -At1 && echo "------Oldest--"'
+alias ltr='ls -Art1 && echo "------Newest--"'
+
+alias ..="cd .."
+alias ...="cd ..; cd .."
+alias cd..='cd ..'
+alias ...='cd ../../../'
+alias ....='cd ../../../../'
+alias .....='cd ../../../../'
+alias .4='cd ../../../../'
+alias .5='cd ../../../../..'
+
+alias grep='grep --color=auto'
+# handy short cuts #
+alias h='history'
+alias j='jobs -l'
+alias path='echo -e ${PATH//:/\\n}'
+alias vi=vim
+# Stop after sending count ECHO_REQUEST packets #
+alias ping='ping -c 5'
+# Use netstat command to quickly list all TCP/UDP port on the server:
+alias ports='netstat -tulanp'
+
+#16: Add safety nets
+# do not delete / or prompt if deleting more than 3 files at a time #
+alias rm='rm -Iv --preserve-root'
+# confirmation #
+alias mv='mv -iv'
+alias cp='cp -iv'
+alias ln='ln -i'
+
+alias cl="clear;ls;pwd"
+
+alias sshconfig="${EDITOR:-vim} ~/.ssh/config"
+alias bashrc="${EDITOR:-vim} +120 ~/.bashrc && source ~/.bashrc && echo Bash config edited and reloaded."
+alias zshrc="${EDITOR:-vim} +120 ~/.zshrc && source ~/.zshrc && echo zshrc config edited and reloaded."
+alias src="source "
+
+
+## pass options to free ##
+alias meminfo='free -m -l -t'
+## get top process eating memory
+alias psmem='ps auxf | sort -nr -k 4'
+alias psmem10='ps auxf | sort -nr -k 4 | head -10'
+## get top process eating cpu ##
+alias pscpu='ps auxf | sort -nr -k 3'
+alias pscpu10='ps auxf | sort -nr -k 3 | head -10'
+## Get server cpu info ##
+alias cpuinfo='lscpu'
+## older system use /proc/cpuinfo ##
+##alias cpuinfo='less /proc/cpuinfo' ##
+## get GPU ram on desktop / laptop##
+alias gpumeminfo='grep -i --color memory /var/log/Xorg.0.log'
+# top
+alias cpu='top -o cpu'
+alias mem='top -o rsize' # memory
+
+#copy output of last command to clipboard
+alias cl="fc -e -|pbcopy"
+#copy output of last command to clipboard
+alias cl="fc -e -|pbcopy"
+
+#27 Resume wget by default
+alias wget='wget -c'
+
+## set some other defaults ##
+alias df='df -H'
+alias du='du -ch'
+
+alias nvishow='watch -n1 nvidia-smi'
+alias ca='conda activate dl'
+alias fcount='find . | wc -l'
+```
+
 ### For server
 
 ```
@@ -237,39 +355,24 @@ function gitacp() {
     git commit -m "$1"
     git push origin
 }
-```
 
-```
-function gitacp_master() {
+function gitacm() {
     git add *
     git commit -m "$1"
     git push origin master
 }
-```
 
-```
-function gitacp_dev() {
+function gitacd() {
     git add *
     git commit -m "$1"
     git push origin dev
 }
-```
 
 ```
-function gits(){
-    git status
-}
-```
-
-```function gpus(){while sleep 1; do nvidia-smi; done}```
-
-```alias nvishow='watch -n1 nvidia-smi'```
-
-```alias sa='source activate dl'```
 
 ```alias sshcontainer='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -L 7777:127.0.0.1:7777  ymaab@172.17.0.4'```
 
-```alias fcount='find . | wc -l'```
+
 
 ### For personal laptop:
 
@@ -302,7 +405,7 @@ alias gcw='gcalcli calw '
  - https://stackoverflow.com/questions/36394101/pip-install-locale-error-unsupported-locale-setting
  - unset LC_ALL
  - export LC_ALL=C
- 
+
 ## Install Newer tensorflow on container
 https://stackoverflow.com/questions/39817645/cuda-cudnn-installed-but-tensorflow-cant-use-the-gpu
 
