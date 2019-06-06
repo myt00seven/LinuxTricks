@@ -1,6 +1,12 @@
 # LinuxTricks
 Record some ueful Linux Tricks that I have been using
 
+## Change multiple files with find and sed
+
+```bash
+find . -type f -name 'download.sh' -exec sed -i 's/youtube-dl /youtube-dl  --download-archive ytdl-archive-record.txt /g' {} \;
+```
+
 ## Rsync directory with progress bar and without overwrite
 
 ```bash
