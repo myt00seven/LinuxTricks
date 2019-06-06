@@ -1,6 +1,14 @@
 # LinuxTricks
 Record some ueful Linux Tricks that I have been using
 
+## Create a python kernel that jupyter can perceive 
+
+```bash
+conda create -n gpu python pip ipykernel tensorflow-gpu
+conda activate gpu
+python -m ipykernel install --user --name gpu --display-name gpu
+```
+
 ## Change multiple files with find and sed
 
 ```bash
