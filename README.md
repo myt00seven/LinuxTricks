@@ -1,5 +1,13 @@
 # LinuxTricks
 Record some ueful Linux Tricks that I have been using
+## enhance image resolution 
+
+### Setup the alias. Put this in your .bashrc or .zshrc file so it's available at startup.
+alias enhance='function ne() { docker run --rm -v "$(pwd)/`dirname ${@:$#}`":/ne/input -it alexjc/neural-enhance ${@:1:$#-1} "input/`basename ${@:$#}`"; }; ne'
+
+### Now run any of the examples above using this alias, without the `.py` extension.
+enhance --zoom=1 --model=repair images/broken.jpg
+
 
 ## Create a python kernel that jupyter can perceive 
 
