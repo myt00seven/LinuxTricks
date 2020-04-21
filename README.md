@@ -3,6 +3,7 @@ Record some ueful Linux Tricks that I have been using
 
 ## fish config.fish 
 
+```fish
 set -gx PATH /home/myt007/miniconda3/bin $PATH
 
 alias ta='tmux attach'
@@ -38,6 +39,7 @@ alias rcp='rsync -avhP'
 alias ncduroot='sudo ncdu -x /'
 alias minuimushere='find . -type f -print0 | xargs  -0 -P 8 -n 8 minuimus.pl'
 alias dc='docker-compose '
+```
 
 ## enhance image resolution 
 
