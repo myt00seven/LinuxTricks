@@ -1,5 +1,44 @@
 # LinuxTricks
 Record some ueful Linux Tricks that I have been using
+
+## fish config.fish 
+
+set -gx PATH /home/myt007/miniconda3/bin $PATH
+
+alias ta='tmux attach'
+alias yg='you-get '
+alias ytdl="youtube-dl --rm-cache-dir -i --no-check-certificate --merge-output-format mp4 --format 'bestvideo[ext=mp4]+bestaudio[ext=m4a]' --add-metadata --embed-thumbnail "
+alias ytdlmax="youtube-dl --rm-cache-dir -i --no-check-certificate --merge-output-format mp4 --format 'bestvideo+bestaudio[ext=m4a]' --add-metadata --embed-thumbnail "
+
+alias subl='sublime'
+alias nvishow='watch -n1 nvidia-smi'
+alias tree='tree -N'
+alias blogserver='JEKYLL_ENV=production bundle exec jekyll serve -w'
+alias atomblog='atom ~/blog'
+alias filecount='find . | wc -l'
+alias fcount='find . | wc -l'
+alias ta='tmux attach'
+alias brewup='brew update; brew upgrade; brew cleanup; brew doctor'
+
+alias gits='git status'
+alias aria2c='aria2c -x 16 -s 16 '
+alias ca='source activate dl'
+alias cadl='conda activate dl'
+alias ipyserver='jupyter notebook --no-browser --ip=127.0.0.1 --port=8888'
+alias ipyconvert='ipython nbconvert --to script '
+alias kalicontainer='sudo docker run -it --net="host" --privileged kali:1 /bin/bash'
+
+alias untar='sudo tar -xzvf'
+alias update='sudo apt update; sudo apt upgrade -y; wget -O - https://raw.githubusercontent.com/laurent22/joplin/master/Joplin_install_and_update.sh | bash'
+alias install='sudo apt-get install'
+
+alias h265izehere='h265ize -v -m fast  -q 25 -x --no-sao --aq-mode 3 --stats --delete'
+alias rmv='rsync --remove-source-files -avhP'
+alias rcp='rsync -avhP'
+alias ncduroot='sudo ncdu -x /'
+alias minuimushere='find . -type f -print0 | xargs  -0 -P 8 -n 8 minuimus.pl'
+alias dc='docker-compose '
+
 ## enhance image resolution 
 
 ### Setup the alias. Put this in your .bashrc or .zshrc file so it's available at startup.
