@@ -1,6 +1,16 @@
 # LinuxTricks
 Record some ueful Linux Tricks that I have been using
 
+## find all files modified within 24 hours 
+
+```
+find . -maxdepth 1 -mtime -1
+```
+```
+find . -mtime -1
+```
+
+
 ## fish config.fish 
 
 ```fish
